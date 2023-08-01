@@ -10,6 +10,7 @@ html {
 body {
   max-width: 1440px;
   margin: auto;
+  position: relative;
 }
 a {
   text-decoration: none;
@@ -24,6 +25,7 @@ a {
   width: 60px;
   height: 30px;
   border-radius: 15px;
+  transition: background 1s;
 }
 .tog-span {
   background-color: white;
@@ -32,6 +34,7 @@ a {
   height: 25px;
   border-radius: 50%;
   margin-left: -3px;
+  transition: margin-left 1s;
 }
 
 nav,
@@ -49,6 +52,44 @@ nav {
   width: 20px;
 }
 
+/* ::::::::::::::::Banner Styles:::::::::::::::: */
+/* .banner {
+  position: relative;
+} */
+#lamp {
+  position: absolute;
+  top: 0px;
+  left: 290px;
+  z-index: -50;
+}
+.light {
+  position: absolute;
+  left: -65px;
+  top: 575px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.banner {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-banner {
+  margin-right: -500px;
+}
+.active {
+  background-color: orangered;
+}
+.active span {
+  background-color: #fff;
+  margin-left: 29px;
+}
+.on {
+  opacity: 1;
+}
+
+/* ::::::::::::::::Responsive styles:::::::::::::::: */
 @media only screen and (max-width: 602px) {
   nav {
     justify-content: center;
